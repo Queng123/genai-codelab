@@ -12,9 +12,14 @@ import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import { readFile } from 'node:fs/promises';
 
 const OLLAMA_URL = 'http://localhost:11434';
-const MODEL = 'openhermes';
+const MODEL = 'llama3';
 const llm = new ChatOllama({
   baseUrl: OLLAMA_URL,
   model: MODEL,
   temperature: 0.1,
 });
+
+const prompt = 'Who are you ?';
+
+const result = await llm.invoke(prompt);
+console.log(result.content);
