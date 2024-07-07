@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "genai-codelab"
+version = "0.1.0"
+description = ""
+authors = ["glefloch <glfloch@gmail.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<3.12"
+streamlit = "^1.32.1"
+langchain = "^0.1.12"
+ollama = "^0.1.7"
+langchain-community = "^0.0.28"
+bs4 = "^0.0.2"
+chromadb = "^0.4.24"
+pypdf = "^4.1.0"
+qdrant-client = "^1.8.2"
+unstructured = {version= "^0.13.2", extras = ["pdf"]}
+transformers = "^4.40.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
